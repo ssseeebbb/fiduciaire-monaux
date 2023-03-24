@@ -1,26 +1,27 @@
 <template>
-  <div class="h" style="">
+  <div id="header" class="h" style="">
     <div class="h__container">
       <div class="h__content">
         <h1>Fiduciaire Monaux</h1>
         <h2>Experts - comptables &amp; Conseils Fiscaux</h2>
-        <a
-          href="https://www.fiduciaire-monaux.com/fr#"
-          class="btn js_scroll_to"
-          data-scrollto=".services__intro"
-          >Nos services</a
-        >
+        <router-link class="btn" :to="{name:'home', params:{section:'services'}}">
+          Nos services</router-link>
       </div>
-      <span class="h__more js_scroll_to" data-scrollto=".intro">+</span>
+      <span class="h__more" @click="scrollTo('intro')">+</span>
     </div>
     
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import {scrollTo} from "@/composables/scroll";
+</script>
+
+
 
 <style lang="scss">
 @import "@/style/main";
+@import "@/style/mixins";
 .h {
   background-image: url("/public/img/header.jpg");
   background-position: center;
@@ -28,6 +29,8 @@
   height: 70vh;
   &__container {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -36,8 +39,8 @@
   }
 
   &__content {
-    padding: 350px 0 250px 0;
-    height: 100%;
+    // padding: 350px 0 250px 0;
+    flex:1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,17 +48,29 @@
 
     & h1{
         margin-bottom: 15px;
-  color: #fff;
-  font-size: 60px;
-    line-height: 70px;
-    font-weight: 700;
+        color: #fff;
+        font-size: 60px;
+            line-height: 70px;
+            font-weight: 700;
+
+            @include respond(phone){
+                font-size: 40px;
+                line-height: 45px;
+            }
     }
 
     & h2{
         margin-bottom: 50px;
   color: #fff;
   font-size: 20px;
-    line-height: 30px
+    line-height: 30px;
+    @include respond(phone){
+                font-size: 15px;
+                line-height: 18px;
+                margin-bottom: 30px;
+            }
+
+    
   
     }
   }

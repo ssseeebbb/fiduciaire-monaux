@@ -1,68 +1,5 @@
 <template>
-  <div class="navbar">
-    <div class="navbar__logo">
-      <a href="https://www.fiduciaire-monaux.com/fr"
-        ><img src="/files/logo.png" alt="" class="img_full"
-      /></a>
-    </div>
-    <div class="navbar__nav">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a
-              href="https://www.fiduciaire-monaux.com/fr#"
-              class="nav__link js_scroll_to js_mobile_nav"
-              data-scrollto="body"
-              >Accueil</a
-            >
-          </li>
-          <!--
-                 -->
-          <li class="nav__item">
-            <a
-              href="https://www.fiduciaire-monaux.com/fr#"
-              class="nav__link js_scroll_to js_mobile_nav"
-              data-scrollto=".intro"
-              >À propos</a
-            >
-          </li>
-          <!--
-                 -->
-          <li class="nav__item">
-            <a
-              href="https://www.fiduciaire-monaux.com/fr#"
-              class="nav__link js_scroll_to js_mobile_nav"
-              data-scrollto=".services__intro"
-              >Services</a
-            >
-          </li>
-          <!--
-                 -->
-          <li class="nav__item">
-            <a
-              href="https://www.fiduciaire-monaux.com/fr#"
-              class="nav__link js_scroll_to js_mobile_nav"
-              data-scrollto=".contact"
-              >Contact</a
-            >
-          </li>
-          <!--
-                 -->
-          <li class="nav__item">
-            <a
-              href="https://fiduciairemonaux.mydigitalaccountant.be/auth"
-              class="btn nav__link nav__link--btn"
-              target="_blank"
-              >Espace client</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <p class="navbar__burger js_mobile_nav">
-      <a href="https://www.fiduciaire-monaux.com/fr#"><span></span></a>
-    </p>
-  </div>
+<Navigation></Navigation>
 
   <!-- Accueil -->
 <Header></Header>
@@ -71,7 +8,7 @@
   
 
   <!-- Intro -->
-  <div class="intro" data-scrollto="intro">
+  <div id="intro" class="intro">
     <div class="section">
       <div class="container">
         <h2 class="title intro__title">Qui sommes-nous ?</h2>
@@ -115,7 +52,7 @@
   </div>
 
   <!-- Services -->
-  <div class="services">
+  <div id="services" sclass="services">
     <div class="section">
       <div class="container">
         <div class="services__intro">
@@ -264,7 +201,7 @@
   </div>
 
   <!-- Utils -->
-  <div class="utils">
+  <div id="utils" class="utils">
     <div class="section">
       <div class="container container--relative">
         <div class="utils__right">
@@ -333,7 +270,7 @@
   </div>
 
   <!-- Contact -->
-  <div class="contact">
+  <div id="contact" class="contact">
     <div class="container">
       <div class="contact__blocks">
         <div class="contact__block">
@@ -405,55 +342,34 @@
   <!-- <Map></Map> -->
   <GoogleMap></GoogleMap>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p class="footer__logo">
-      <a href="https://www.fiduciaire-monaux.com/fr"
-        ><img src="/files/logo.png" alt="" class="img_full"
-      /></a>
-    </p>
-    <ul class="footer__list">
-      <li class="footer__item">© 2023</li>
-      <li class="footer__item">
-        <a href="https://www.fiduciaire-monaux.com/fr/politique-de-cookies"
-          >Politique de cookies</a
-        >
-      </li>
-      <li class="footer__item">
-        <a
-          href="https://www.fiduciaire-monaux.com/fr/politique-de-confidentialite"
-          >Politique de confidentialité</a
-        >
-      </li>
-      <li class="footer__item">
-        <a href="https://www.fiduciaire-monaux.com/fr/conditions-generales"
-          >Conditions générales</a
-        >
-      </li>
-      <!-- <li class="footer__item">
-        Powered by
-        <a href="https://arpeggio.pub/" target="_blank" class="footer__arpeggio"
-          >Arpeggio</a
-        >
-      </li>
-      <li class="footer__item">
-        <a
-          href="https://www.gdprfolder.eu/fr-be/conformite-rgpd/fiduciaire-monaux-srl"
-          target="_blank"
-          class="footer__gdpr"
-          ><img src="/files/gdpr.png" alt="" class="img_full"
-        /></a>
-      </li> -->
-    </ul>
-  </footer>
+
+  <Footer></Footer>
 </template>
 
 <script setup>
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import GoogleMap from "@/components/GoogleMap";
+
+import {scrollTo} from "@/composables/scroll";
+
 
 import $ from "jquery";
 import skrollr from "skrollr";
+import { watch } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+console.log(route.params);
+
+watch(() => route.params.section , (n, o)=> {
+  
+  setTimeout(() => scrollTo(n), 100);
+})
+
+
 
 /*  ==========================================================================
     Global
@@ -499,6 +415,7 @@ $(window).on("resize", function () {
 
 $(".js_mobile_nav").click(function (e) {
   e.preventDefault();
+  console.log('in');
   $body = $("body");
   if ($body.hasClass("nav_is_open")) {
     $body.removeClass("nav_is_open");
@@ -507,18 +424,6 @@ $(".js_mobile_nav").click(function (e) {
   }
 });
 
-/*  ==========================================================================
-    Cookies
-    ==========================================================================  */
-
-$(".js_close_cookies").click(function (e) {
-  e.preventDefault();
-  $("body").addClass("cookies_close");
-  $.ajax({
-    type: "POST",
-    url: baseUrl + "/data/accept_cookies.php",
-  });
-});
 
 /*  ==========================================================================
     Skrollr

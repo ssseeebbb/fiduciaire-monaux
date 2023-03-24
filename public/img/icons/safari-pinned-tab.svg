@@ -1,3 +1,13 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00251 14.9297L0 1.07422H6.14651L8.00251 4.27503L9.84583 1.07422H16L8.00251 14.9297Z" fill="black"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2B364E;}
+</style>
+<g>
+	<path class="st0" d="M253.6,90.5v96.7c0,0-187.9,233.6-191,234.3c-3.1,0.8,0-96.7,0-96.7L253.6,90.5z"/>
+	<path class="st0" d="M352.2,90.5v96.7c0,0-187.9,233.6-191,234.3c-3.1,0.8,0-96.7,0-96.7L352.2,90.5z"/>
+	<path class="st0" d="M450.8,90.5v96.7c0,0-187.9,233.6-191,234.3s0-96.7,0-96.7L450.8,90.5z"/>
+</g>
 </svg>

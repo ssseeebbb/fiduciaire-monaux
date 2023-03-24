@@ -1,0 +1,73 @@
+@mixin buttonNoStyle {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == xsmall {
+      @media only screen and (max-width: 20.625em) {
+        @content;
+      } //330px
+    }
+  
+    @if $breakpoint == small {
+      @media only screen and (max-width: 28.125em) {
+        @content;
+      } //450px
+    }
+  
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) {
+        @content;
+      } //600px
+    }
+    @if $breakpoint == large-phone {
+      @media only screen and (max-width: 46.875em) {
+        @content;
+      } //750px
+    }
+    @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) {
+        @content;
+      } //900px
+    }
+    @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) {
+        @content;
+      } //1200px
+    }
+    @if $breakpoint == large-desktop {
+      @media only screen and (min-width: 93.75em) {
+        @content;
+      } //1500px
+    }
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) {
+        @content;
+      } //1800px
+    }
+    @if $breakpoint == h-medium {
+      @media only screen and (max-height: 45em) {
+        @content;
+      } //1800px
+    }
+    @if $breakpoint == h-small {
+      @media only screen and (max-height: 31.25em) {
+        @content;
+      } //500px
+    }
+  
+    @if $breakpoint == h-xsmall {
+      @media only screen and (max-height: 28.125em) {
+        @content;
+      } //450px
+    }
+  }
+  
