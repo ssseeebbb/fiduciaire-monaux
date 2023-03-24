@@ -6,7 +6,7 @@ npm run build
 
 git add dist
 
-git commit -m "New Deployment"
+git commit -m "New Deployment 2"
 
 git subtree push --prefix dist origin gh-pages
 
