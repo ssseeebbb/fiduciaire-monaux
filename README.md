@@ -17,3 +17,13 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Process pour publier une nouvelle version
+
+- npm run build
+- git add *
+- git commit -m "commit comment"
+- git push origin main
+- git subtree push --prefix dist origin gh-pages
+
