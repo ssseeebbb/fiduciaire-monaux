@@ -4,12 +4,6 @@ set -e
 
 npm run build
 
-git add dist
+cd dist/
 
-git commit -m "New Deployment 2"
-
-git subtree push --prefix dist origin gh-pages
-
-git add -A
-git commit -m "main push"
-git push origin main
+cp index.html 404.html

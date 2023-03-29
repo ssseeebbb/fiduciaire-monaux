@@ -21,7 +21,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Process pour publier une nouvelle version
 
-- npm run build
+
+- RUN DEPLOY.SH (or commands in that file)
+
 - git add *
 - git commit -m "commit comment"
 - git push origin main
