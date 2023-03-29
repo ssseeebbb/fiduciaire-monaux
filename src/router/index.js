@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
-    path: '/fiduciaire-monaux/politique-de-cookies',
+    path: '/politique-de-cookies',
     name: 'cookies',
     component: () =>
     import(/* webpackChunkName: "cookies" */ "@/views/CookiesView.vue"),
@@ -12,7 +12,7 @@ const routes = [
     }
   },
   {
-    path: '/fiduciaire-monaux/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
     name: 'privacy',
     component: () =>
     import(/* webpackChunkName: "cookies" */ "@/views/PrivacyView.vue"),
@@ -21,7 +21,7 @@ const routes = [
     }
   },
   {
-    path: '/fiduciaire-monaux/conditions-generales',
+    path: '/conditions-generales',
     name: 'terms',
     component: () =>
     import(/* webpackChunkName: "cookies" */ "@/views/TermsView.vue"),
