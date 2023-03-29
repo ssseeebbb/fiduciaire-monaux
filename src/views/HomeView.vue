@@ -223,7 +223,7 @@
               </li>
               <li class="list__item">
                 <a href="https://finances.belgium.be/fr/" target="_blank"
-                  >Service Public Fédérale FINANCES</a
+                  >Service Public Fédéral FINANCES</a
                 >
               </li>
               <li class="list__item">
