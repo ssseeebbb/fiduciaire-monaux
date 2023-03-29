@@ -220,7 +220,7 @@ function initMap() {
   });
 }
 
-window.initMap = initMap;
+// window.initMap = initMap;
 </script>
 
 <style lang="scss">
