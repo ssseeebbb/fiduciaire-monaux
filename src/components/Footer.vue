@@ -2,27 +2,24 @@
   <!-- Footer -->
   <footer id="footer" class="footer">
     <p class="footer__logo">
-      <a href="https://www.fiduciaire-monaux.com/fr"
+      <router-link :to="{ name: 'home' }"
         ><img src="/files/logo.png" alt="" class="img_full"
-      /></a>
+      /></router-link>
     </p>
     <ul class="footer__list">
       <li class="footer__item">© 2023</li>
       <li class="footer__item">
-        <a href="https://www.fiduciaire-monaux.com/fr/politique-de-cookies"
-          >Politique de cookies</a
+        <router-link :to="{ name: 'cookies' }">
+          Politique de cookies
+        </router-link>
+      </li>
+      <li class="footer__item">
+        <router-link :to="{ name: 'privacy' }"
+          >Politique de confidentialité</router-link
         >
       </li>
       <li class="footer__item">
-        <a
-          href="https://www.fiduciaire-monaux.com/fr/politique-de-confidentialite"
-          >Politique de confidentialité</a
-        >
-      </li>
-      <li class="footer__item">
-        <a href="https://www.fiduciaire-monaux.com/fr/conditions-generales"
-          >Conditions générales</a
-        >
+        <router-link :to="{ name: 'terms' }">Conditions générales</router-link>
       </li>
       <!-- <li class="footer__item">
         Powered by
@@ -42,9 +39,7 @@
   </footer>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss">
 .footer {
@@ -122,5 +117,4 @@
   display: inline-block;
   width: 55px;
 }
-
 </style>

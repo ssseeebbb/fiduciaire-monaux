@@ -1,9 +1,9 @@
 <template>
    <div id="nav" class="navbar " :class="isMobileOpen ? 'nav_is_open' : ''">
     <div class="navbar__logo">
-      <a href="https://www.fiduciaire-monaux.com/fr"
+      <router-link :to="{name:'home'}"
         ><img src="/files/logo.png" alt="" class="img_full"
-      /></a>
+      /></router-link>
     </div>
     <div class="navbar__nav">
       <nav class="nav">
