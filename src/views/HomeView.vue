@@ -223,7 +223,7 @@
               </li>
               <li class="list__item">
                 <a href="https://finances.belgium.be/fr/" target="_blank"
-                  >Service Publique Fédérale FINANCES</a
+                  >Service Public Fédérale FINANCES</a
                 >
               </li>
               <li class="list__item">
@@ -249,12 +249,12 @@
               </li>
               <li class="list__item">
                 <a href="https://justice.belgium.be/fr/" target="_blank"
-                  >Service Publique Fédérale JUSTICE</a
+                  >Service Public Fédéral JUSTICE</a
                 >
               </li>
               <li class="list__item">
                 <a
-                  href="http://ec.europa.eu/taxation_customs/vies/vieshome.do"
+                  href="https://ec.europa.eu/taxation_customs/vies/#/vat-validation"
                   target="_blank"
                   >Vérification n° TVA</a
                 >

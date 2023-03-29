@@ -21,12 +21,11 @@
       <li class="footer__item">
         <router-link :to="{ name: 'terms' }">Conditions générales</router-link>
       </li>
-      <!-- <li class="footer__item">
-        Powered by
+        <!-- Powered by
         <a href="https://arpeggio.pub/" target="_blank" class="footer__arpeggio"
           >Arpeggio</a
         >
-      </li>
+      </li> -->
       <li class="footer__item">
         <a
           href="https://www.gdprfolder.eu/fr-be/conformite-rgpd/fiduciaire-monaux-srl"
@@ -34,7 +33,7 @@
           class="footer__gdpr"
           ><img src="/files/gdpr.png" alt="" class="img_full"
         /></a>
-      </li> -->
+      </li>
     </ul>
   </footer>
 </template>

@@ -25,5 +25,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - git add *
 - git commit -m "commit comment"
 - git push origin main
-- git subtree push --prefix dist origin gh-pages
+- git subtree split --prefix dist -b gh-pages
+- git push -f origin gh-pages:gh-pages   
 

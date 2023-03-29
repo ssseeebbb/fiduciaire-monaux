@@ -639,6 +639,7 @@ body {
   line-height: 32px;
   letter-spacing: 0.5px;
   color: #76777a;
+  text-align: justify;
 }
 @media all and (max-width: 600px) {
   .text,
