@@ -362,8 +362,6 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-console.log(route.params);
-
 watch(() => route.params.section , (n, o)=> {
   
   setTimeout(() => scrollTo(n), 100);
